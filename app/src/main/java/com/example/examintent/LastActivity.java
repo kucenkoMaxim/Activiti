@@ -1,9 +1,6 @@
 package com.example.examintent;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,9 +9,7 @@ import androidx.annotation.Nullable;
 
 public class LastActivity extends Activity {
 
-    public static final String EXTRA_NAME = "EXTRA_NAMEgit";
-
-    private TextView txtLastName;
+    public static final String EXTRA_NAME = "EXTRA_NAME";
 
 
     @Override
@@ -23,23 +18,23 @@ public class LastActivity extends Activity {
         setContentView(R.layout.last_layout);
 
 
-        txtLastName =(TextView) findViewById(R.id.txtLastName);
+        TextView txtLastName = findViewById(R.id.txt_Last_Name);
 
         String txtName=getIntent().getStringExtra(EXTRA_NAME);
 
-        txtLastName.setText((txtLastName.getText().toString()+""+txtName));
+        String endText=(txtLastName.getText().toString()+""+txtName);
+
+        txtLastName.setText(endText);
 
 
-            }
+    }
             public void back(View v){
-                if ((v.getId()) == R.id.back_button) {
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                }
+                onBackPressed();
+
             }
 
 
-        }
+}
 
 
 

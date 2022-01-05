@@ -18,11 +18,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Last_Name"
         app:layout_constraintVertical_bias="0.448" />
 
     <TextView
-        android:id="@+id/txtLastName"
+        android:id="@+id/txt_Last_Name"
         android:layout_width="267dp"
         android:layout_height="105dp"
         android:layout_marginTop="72dp"
@@ -35,6 +35,6 @@
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="txtLastName" />
+        app:constraint_referenced_ids="txt_Last_Name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
